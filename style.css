@@ -1,0 +1,107 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  font-family:'Roboto', sans-serif;
+  font-size: 62.5%;
+}
+body{
+  position: relative;
+  background-color: black;
+  color: white;
+}
+#app{
+  position: absolute;
+  z-index: -1;
+}
+nav{
+  position: absolute;
+  width: 100%;
+  height: clamp(5rem, 8rem + 5vw, 12.2rem);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  gap: clamp(0.5rem, 2vw,4.2rem);
+  justify-content: center;
+}
+svg{
+  animation: rotate-center .8s ease-in-out both;
+}
+a, #btn{
+  text-decoration: none;
+  color: #C4C4CC;
+  font-size: clamp(1rem, 1.1rem + 2vw,2.1rem);
+  justify-content: center;
+}
+a:hover{
+  font-size: clamp(1rem, 1.7rem + 2vw, 2.4rem);
+  color: white;
+}
+.select{
+  font-size: clamp(1rem, 1.7rem + 2vw, 2.4rem);
+  color: white;
+}
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.4rem;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+h1{
+ font-size: clamp(2rem, 2rem + 4vw,4.8rem);
+}
+
+#btn{
+  background-color: transparent;
+  color: white;
+  border: .2rem solid #FFFFFF;
+  border-radius: .5rem;
+  padding: 1.2rem 3.2rem;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  }
+#btn:hover{
+  background-color: white;
+  color:hsla(194, 97%, 31%, 1);
+}
+.document{
+  max-width: 64.8rem;
+  display: grid;
+  gap: 1.6rem;
+  margin: 0 3rem;
+  margin-top: 15rem;
+}
+p{
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 160%;
+  color:#E1E1E6;
+}
+video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -100;
+    opacity: 0.5;
+}
+
+@media (min-width: 760px){
+  .document{
+    margin-left: 10.2rem;
+    margin-top: 18.5rem;
+  }
+  nav{
+    justify-content: left;
+    padding-left: 7.2rem;
+  }
+}
+@keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
